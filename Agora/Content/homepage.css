@@ -150,3 +150,26 @@
     background: #fff;
     box-shadow: 0 2px 5px 2px #e3e3e3;
 }
+
+.popular-item-img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-next-button,
+.carousel-prev-button {
+    color: #8B4513;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    font-size: 200%;
+}
+
+.carousel-indicators li {
+    background-color: #fff !important;
+}
+
+.carousel-indicators .active {
+    background-color: #8B4513 !important;
+}

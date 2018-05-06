@@ -99,3 +99,7 @@ D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddIsSubscribedToCustomer.res
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddMembershipType.resources
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.PopulateMembershipTypes.resources
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.ChangeNamePropToString.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.ApplyAnnotationsToCustomerName.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductId.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductName.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductId1.resources

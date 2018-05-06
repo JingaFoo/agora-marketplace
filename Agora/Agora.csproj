@@ -175,6 +175,22 @@
     <Compile Include="Migrations\201804302048112_ChangeNamePropToString.Designer.cs">
       <DependentUpon>201804302048112_ChangeNamePropToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804302126594_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201804302126594_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201804302126594_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060326483_AddProductId.cs" />
+    <Compile Include="Migrations\201805060326483_AddProductId.Designer.cs">
+      <DependentUpon>201805060326483_AddProductId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060329265_AddProductName.cs" />
+    <Compile Include="Migrations\201805060329265_AddProductName.Designer.cs">
+      <DependentUpon>201805060329265_AddProductName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060332074_AddProductId1.cs" />
+    <Compile Include="Migrations\201805060332074_AddProductId1.Designer.cs">
+      <DependentUpon>201805060332074_AddProductId1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -328,6 +344,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804302048112_ChangeNamePropToString.resx">
       <DependentUpon>201804302048112_ChangeNamePropToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804302126594_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201804302126594_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060326483_AddProductId.resx">
+      <DependentUpon>201805060326483_AddProductId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060329265_AddProductName.resx">
+      <DependentUpon>201805060329265_AddProductName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060332074_AddProductId1.resx">
+      <DependentUpon>201805060332074_AddProductId1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
