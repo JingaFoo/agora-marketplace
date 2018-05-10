@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Agora.Models.Products>
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="manage">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron" style="background: #fff; margin-bottom: 0;">
+                <h1 class="display-4">Manage your products</h1>
+                <p class="lead">Search, select and manage your products</p>
+                <hr class="my-4"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" style="text-align: center;">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Condition</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Subcategory</th>
+                    <th scope="col">Price ($)</th>
+                    <th scope="col">Manage</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr class="data-name">
+                        <th class="align-middle" scope="row">@product.ProductId</th>
+                        <td class="align-middle">@product.Condition</td>
+                        <td class="align-middle">@product.Product</td>
+                        <td class="align-middle"><img class="data-img" src="@product.Image" alt="Product image"/></td>
+                        <td class="align-middle">@product.CategoryName</td>
+                        <td class="align-middle">@product.SubCategoryName</td>
+                        <td class="align-middle">@product.Price</td>
+                        <td class="align-middle edit-remove">@Html.ActionLink("Edit/Remove", "Edit", "Dashboard", new {productId = product.ProductId}, null)</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

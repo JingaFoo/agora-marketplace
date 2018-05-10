@@ -1,6 +1,11 @@
 ﻿.jumbotron {
-    background-color: #f4f4f4;
+    background-color: #fff;
     text-align: center;
+    margin-bottom: 0;
+}
+
+.jumbotron h1 {
+    word-spacing: 4px;
 }
 
 .content-box {
@@ -27,8 +32,8 @@
 .title h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 70%;
-    font-weight: 700;
+    font-size: 90%;
+    font-weight: 500;
 }
 
 .image-box {
@@ -60,6 +65,6 @@
     border: 1px solid #000;
 }
 
-hightlight {
+.hightlight {
     background: #555;
 }

@@ -1,0 +1,17 @@
+﻿.data-name {
+    text-transform: capitalize;
+}
+
+.edit-remove a {
+    color: #555;
+
+}
+
+.edit-remove a:hover {
+    color: #8B4513;
+}
+
+.data-img {
+    height: 100px;
+    width: auto;
+}

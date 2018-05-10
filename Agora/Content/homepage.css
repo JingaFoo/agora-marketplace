@@ -151,6 +151,19 @@
     box-shadow: 0 2px 5px 2px #e3e3e3;
 }
 
+/*/ ----------------------------------------------------------- /*/
+/*/ ---------------------- CAROUSEL --------------------------- /*/
+/*/ ----------------------------------------------------------- /*/
+
+.category-title {
+    font-weight: 400;
+    text-align: center;
+}
+
+.category-title:after {
+    border-bottom: 1px solid #000;
+}
+
 .popular-item-img {
     width: 100%;
     height: auto;
@@ -173,3 +186,28 @@
 .carousel-indicators .active {
     background-color: #8B4513 !important;
 }
+
+.product-name,
+.product-price {
+    color: #555;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.carousel-caption {
+    padding-bottom: 10px !important;
+}
+
+.carousel-top {
+    bottom: initial !important;
+}
+
+.product-price {
+    font-size: 170%;
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    background: #ecedef;
+}
+

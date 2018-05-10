@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Agora.Models.Products>
+
+@{
+    ViewBag.Title = "Smartphones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="smartphones">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1 class="display-4">Smartphones</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        @foreach (var smartphone in Model)
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-image">
+                        <img style="height: 300px; width: auto;" src="@smartphone.Image" alt="Product Image"/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="product-details">
+                        <div class="product-title">
+                            <a class="product" href="#"><h4>@smartphone.Product</h4></a>
+                        </div>
+                        <div class="product-brand">
+                         by <a href="#"><span class="brand">@smartphone.Brand</span></a>
+                        </div>
+                        <div class="product-condition">
+                            <span class="condition">@smartphone.Condition</span>
+                        </div>
+                        <div class="product-price">
+                            @if (@smartphone.Cents == 0)
+                            {
+                                <span>$@smartphone.Price</span><span>.00</span>
+                            }
+                            else
+                            {
+                                <span>$@smartphone.Price</span><span>.@smartphone.Cents</span>
+                            }
+
+                        </div>
+                        <div class="product-availability">
+                            <h5>In Stock</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        }
+    </div>
+</div>
+

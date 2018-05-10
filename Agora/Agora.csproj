@@ -150,8 +150,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\ElectronicsController.cs" />
     <Compile Include="Controllers\FashionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,12 +195,85 @@
     <Compile Include="Migrations\201805060332074_AddProductId1.Designer.cs">
       <DependentUpon>201805060332074_AddProductId1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805060343245_ChangeIdToProductId.cs" />
+    <Compile Include="Migrations\201805060343245_ChangeIdToProductId.Designer.cs">
+      <DependentUpon>201805060343245_ChangeIdToProductId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060349041_ChangeProductNameToName.cs" />
+    <Compile Include="Migrations\201805060349041_ChangeProductNameToName.Designer.cs">
+      <DependentUpon>201805060349041_ChangeProductNameToName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060610016_AddFilterModel.cs" />
+    <Compile Include="Migrations\201805060610016_AddFilterModel.Designer.cs">
+      <DependentUpon>201805060610016_AddFilterModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805060632092_AddCategoriesModel.cs" />
+    <Compile Include="Migrations\201805060632092_AddCategoriesModel.Designer.cs">
+      <DependentUpon>201805060632092_AddCategoriesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080154178_UpdateCurrentModel.cs" />
+    <Compile Include="Migrations\201805080154178_UpdateCurrentModel.Designer.cs">
+      <DependentUpon>201805080154178_UpdateCurrentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080209306_ModifyCategoriesName.cs" />
+    <Compile Include="Migrations\201805080209306_ModifyCategoriesName.Designer.cs">
+      <DependentUpon>201805080209306_ModifyCategoriesName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080244450_AddCategoryIconToCategoryModel.cs" />
+    <Compile Include="Migrations\201805080244450_AddCategoryIconToCategoryModel.Designer.cs">
+      <DependentUpon>201805080244450_AddCategoryIconToCategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080543250_AddSubcategoriesModel.cs" />
+    <Compile Include="Migrations\201805080543250_AddSubcategoriesModel.Designer.cs">
+      <DependentUpon>201805080543250_AddSubcategoriesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080616147_AddProductNameDataAnnotations.cs" />
+    <Compile Include="Migrations\201805080616147_AddProductNameDataAnnotations.Designer.cs">
+      <DependentUpon>201805080616147_AddProductNameDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080635194_ReplaceCategoryIdWithCategoryName.cs" />
+    <Compile Include="Migrations\201805080635194_ReplaceCategoryIdWithCategoryName.Designer.cs">
+      <DependentUpon>201805080635194_ReplaceCategoryIdWithCategoryName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805092342430_ChangePriceFieldToInt.cs" />
+    <Compile Include="Migrations\201805092342430_ChangePriceFieldToInt.Designer.cs">
+      <DependentUpon>201805092342430_ChangePriceFieldToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100017253_AddSubCategoryToProductsModel.cs" />
+    <Compile Include="Migrations\201805100017253_AddSubCategoryToProductsModel.Designer.cs">
+      <DependentUpon>201805100017253_AddSubCategoryToProductsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100036197_ChangeNameToProduct.cs" />
+    <Compile Include="Migrations\201805100036197_ChangeNameToProduct.Designer.cs">
+      <DependentUpon>201805100036197_ChangeNameToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100146333_AddCategoryIdToSubCategoryModel.cs" />
+    <Compile Include="Migrations\201805100146333_AddCategoryIdToSubCategoryModel.Designer.cs">
+      <DependentUpon>201805100146333_AddCategoryIdToSubCategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100350079_AddProductBrand.cs" />
+    <Compile Include="Migrations\201805100350079_AddProductBrand.Designer.cs">
+      <DependentUpon>201805100350079_AddProductBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100413542_AddCentsAndConditionToProductModel.cs" />
+    <Compile Include="Migrations\201805100413542_AddCentsAndConditionToProductModel.Designer.cs">
+      <DependentUpon>201805100413542_AddCentsAndConditionToProductModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100438563_AddProductConditionModel.cs" />
+    <Compile Include="Migrations\201805100438563_AddProductConditionModel.Designer.cs">
+      <DependentUpon>201805100438563_AddProductConditionModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Filters.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\ProductCondition.cs" />
     <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Subcategories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ProductFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -205,6 +282,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\categories.css" />
+    <Content Include="Content\dashboard.css" />
     <Content Include="Content\fa-brands.css" />
     <Content Include="Content\fa-brands.min.css" />
     <Content Include="Content\fa-regular.css" />
@@ -218,6 +297,8 @@
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\fonts\ionicons.svg" />
     <Content Include="Content\homepage.css" />
+    <Content Include="Content\manage.css" />
+    <Content Include="Content\smartphones.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -316,9 +397,17 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="Views\Categories\Categories.cshtml" />
+    <Content Include="Views\Dashboard\ProductForm.cshtml" />
+    <Content Include="Views\Dashboard\Dashboard.cshtml" />
+    <Content Include="Views\Dashboard\Manage.cshtml" />
+    <Content Include="Views\Fashion\Shoes.cshtml" />
+    <Content Include="Views\Electronics\Electronics.cshtml" />
+    <Content Include="Views\Electronics\Smartphones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -356,6 +445,57 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805060332074_AddProductId1.resx">
       <DependentUpon>201805060332074_AddProductId1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060343245_ChangeIdToProductId.resx">
+      <DependentUpon>201805060343245_ChangeIdToProductId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060349041_ChangeProductNameToName.resx">
+      <DependentUpon>201805060349041_ChangeProductNameToName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060610016_AddFilterModel.resx">
+      <DependentUpon>201805060610016_AddFilterModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805060632092_AddCategoriesModel.resx">
+      <DependentUpon>201805060632092_AddCategoriesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080154178_UpdateCurrentModel.resx">
+      <DependentUpon>201805080154178_UpdateCurrentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080209306_ModifyCategoriesName.resx">
+      <DependentUpon>201805080209306_ModifyCategoriesName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080244450_AddCategoryIconToCategoryModel.resx">
+      <DependentUpon>201805080244450_AddCategoryIconToCategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080543250_AddSubcategoriesModel.resx">
+      <DependentUpon>201805080543250_AddSubcategoriesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080616147_AddProductNameDataAnnotations.resx">
+      <DependentUpon>201805080616147_AddProductNameDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080635194_ReplaceCategoryIdWithCategoryName.resx">
+      <DependentUpon>201805080635194_ReplaceCategoryIdWithCategoryName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805092342430_ChangePriceFieldToInt.resx">
+      <DependentUpon>201805092342430_ChangePriceFieldToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100017253_AddSubCategoryToProductsModel.resx">
+      <DependentUpon>201805100017253_AddSubCategoryToProductsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100036197_ChangeNameToProduct.resx">
+      <DependentUpon>201805100036197_ChangeNameToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100146333_AddCategoryIdToSubCategoryModel.resx">
+      <DependentUpon>201805100146333_AddCategoryIdToSubCategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100350079_AddProductBrand.resx">
+      <DependentUpon>201805100350079_AddProductBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100413542_AddCentsAndConditionToProductModel.resx">
+      <DependentUpon>201805100413542_AddCentsAndConditionToProductModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100438563_AddProductConditionModel.resx">
+      <DependentUpon>201805100438563_AddProductConditionModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

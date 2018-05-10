@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Agora.Models.Categories>
+
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="jumbotron" style="background: #fff; margin-bottom: 0;">
+            <h1 class="display-4">Categories</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+</div>
+<div class="container category-content">
+    <div class="row  inner-category">
+        @foreach (var category in Model)
+        {
+            <div class="col-md-4">
+                <div class="category-box">
+                    <a href="/@category.CategoryName"><span class="category-title">@category.CategoryName</span></a>
+                    <hr />
+                    <i class="@category.CategoryIcon category-icon"></i>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

@@ -28,6 +28,10 @@ namespace Agora
                       "~/Content/bootstrap.css",
                       "~/Content/fontawesome-all.css",
                       "~/Content/fashion.css",
+                      "~/Content/categories.css",
+                      "~/Content/dashboard.css",
+                      "~/Content/manage.css",
+                      "~/Content/smartphones.css",
                       "~/Content/Site.css"));
         }
     }

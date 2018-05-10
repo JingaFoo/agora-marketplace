@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12" style="margin-top: 30px;">
+        <div class="jumbotron" style="background: #fff; margin-bottom: 0;">
+            <h1 class="display-4">Welcome to your Dashboard</h1>
+            <p class="lead">Create, View and Manage your Products using the Dashboard</p>
+            <hr class="my-4">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row dashboard-menu">
+        <div class="col-md-4">
+            <div class="dashboard-menu-box">
+                <a href="/dashboard/create"><span class="dashboard-menu-title">Create</span></a>
+                <hr />
+                <i class="fas fa-plus dashboard-menu-icon" style="font-size: 150%;"></i>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dashboard-menu-box">
+                <a href="/dashboard/manage"><span class="dashboard-menu-title">Manage</span></a>
+                <hr />
+                <i class="far fa-clipboard dashboard-menu-icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+

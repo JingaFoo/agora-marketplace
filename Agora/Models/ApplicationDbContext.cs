@@ -10,5 +10,9 @@ namespace Agora.Models
     {
         public DbSet<Products> Products { get; set; }
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<Filters> Filters { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Subcategories> Subcategories { get; set; }
+        public DbSet<ProductCondition> ProductCondition { get; set; }
     }
 }

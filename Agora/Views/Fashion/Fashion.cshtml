@@ -1,38 +1,37 @@
-﻿@model IEnumerable<Agora.Models.Products>
+﻿@model IEnumerable<Agora.Models.Subcategories>
+
 @{
     ViewBag.Title = "Fashion";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<div class="row">
-    <div class="col-sm-12" style="margin-top: 30px;">
-        <div class="jumbotron" style="background: #fff;">
-            <h1 class="display-4">Trending</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
+<div class="fashion">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron" style="background: #fff; margin-bottom: 0;">
+                <h1 class="display-4">Fashion</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container category-content">
+            <div class="row inner-category">
+                @foreach (var subcat in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="category-box">
+                            <h4><a href="/fashion/@subcat.SubcategoryName">@subcat.SubcategoryName</a></h4>
+                            <hr/>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 </div>
-<div class="row" style="background: #f4f4f4; padding: 40px;">
-    @foreach (var product in Model)
-    {
-        <div class="col-sm-4" style="margin-top: 30px;">
-            <div class="content-box">
-                <div class="title">
-                    <h3>@product.Name</h3>
-                </div>
-                <div class="image-box">
-                    <img src="@product.Image" alt="Alternate Text"/>
-                </div>
-                <div class="price">
-                    $10
-                </div>
-            </div>
-        </div>
 
-    }
-</div>
 
 
 
