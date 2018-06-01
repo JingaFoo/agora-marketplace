@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using Agora.Models;
 
@@ -48,9 +47,9 @@ namespace Agora.Controllers.Api
         }
 
         // PUT /api/products/id
-        [HttpPut]
-        public void UpdateCustomer(int id, Products product)
+        public void UpdateProduct(int id, Products product)
         {
+
             if (!ModelState.IsValid)
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
 

@@ -325,6 +325,7 @@
     <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Filters.cs" />
+    <Compile Include="Models\JsonResponse.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\ProductCondition.cs" />
     <Compile Include="Models\Products.cs" />
