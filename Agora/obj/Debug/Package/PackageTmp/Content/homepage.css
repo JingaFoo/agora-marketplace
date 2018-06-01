@@ -1,0 +1,289 @@
+﻿/*/ ----------------------------------------------------------- /*/
+/*/ ---------------------- MAIN NAV --------------------------- /*/
+/*/ ----------------------------------------------------------- /*/
+
+.main-nav .navbar {
+    background-color: #fff;
+    padding: 0 1rem;
+    box-shadow: 0 4px 2px -2px #ccc;
+}
+
+.main-navigation {
+    margin-bottom: 30px;
+
+}
+
+.main-nav .navbar-toggler:focus {
+    outline: none;
+}
+
+.main-navigation .navbar-nav {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    margin-top: 10px;
+}
+
+/*
+.main-navigation .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+} */
+
+.main-nav .nav-link:hover {
+    background: #fff;
+    color: #8B4513;
+}
+
+.main-nav .nav-link {
+    color: #000;
+    transition: color 0.5s, box-shadow 0.5s ease;
+    -webkit-transition: color 0.3s, box-shadow 0.3s ease;
+    border-right: 1px solid #ccc;
+}
+
+.main-nav .navbar-expand-sm .navbar-nav .nav-link {
+    padding: 1.7rem;
+}
+
+.navbar-brand {
+    margin-right: 0 !important;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 95px;
+    width: auto;
+}
+
+.main-nav .nav-icons {
+    font-size: 150%;
+    color: #4c4c4c;
+}
+
+.main-nav .nav-right {
+    width: 100%;
+}
+
+.main-nav .nav-right .input-group {
+    width: 85%;
+}
+
+.navigation-links {
+    margin-left: 20px;
+    display: flex;
+}
+
+.main-nav .form-group select {
+    border: 0;
+    border-bottom: 1px solid #8B4513;
+    padding: 25px 12px;
+    background-color: #fff;
+    font-size: 110%;
+    border-radius: 0;
+    transition: box-shadow 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease;
+}
+
+.main-nav .form-group select:focus {
+    border-color: #8B4513;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.main-nav .nav-right .input-group-append button {
+    background-color: #fff;
+    font-size: 140%;
+    color: #4c4c4c;
+    border-bottom: 1px solid #8B4513;
+    transition: box-shadow 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease;
+}
+
+.main-nav .nav-right .input-group-append button:hover {
+    color: #8B4513;
+}
+
+.main-nav .nav-right .input-group-append button:focus {
+    outline: none;
+}
+
+.main-nav .nav-right .form-control {
+    border: 0;
+    border-bottom: 1px solid #8B4513;
+    font-size: 110%;
+    padding: 0 0.75rem;
+    padding-top: .1rem;
+    border-radius: 0;
+    transition: box-shadow 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease;
+}
+
+.main-nav .nav-right .form-control:focus {
+    box-shadow: none;
+}
+
+.form-inline {
+    margin-left: 20px;
+}
+
+.navbar-toggle {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 10px 0;
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    width: 5%;
+    background-color: #fff;
+    color: #555;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+.navbar-toggle:hover {
+    color: #8B4513;
+    background: #fff;
+    box-shadow: 0 2px 5px 2px #e3e3e3;
+}
+
+/*/ ----------------------------------------------------------- /*/
+/*/ ---------------------- CAROUSEL --------------------------- /*/
+/*/ ----------------------------------------------------------- /*/
+
+.category-title {
+    font-weight: 400;
+    text-align: center;
+}
+
+.category-title:after {
+    border-bottom: 1px solid #000;
+}
+
+.popular-item-img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-next-button,
+.carousel-prev-button {
+    color: #8B4513;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    font-size: 200%;
+}
+
+.carousel-indicators li {
+    background-color: #fff !important;
+}
+
+.carousel-indicators .active {
+    background-color: #8B4513 !important;
+}
+
+.product-name,
+.product-price {
+    color: #555;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.carousel-caption {
+    padding-bottom: 10px !important;
+}
+
+.carousel-top {
+    bottom: initial !important;
+}
+
+.product-price {
+    font-size: 170%;
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    background: #ecedef;
+}
+
+/*/ ---------------------------------------------------------------- /*/
+/*/ ---------------------- MEDIA-QUERIES --------------------------- /*/
+/*/ ---------------------------------------------------------------- /*/
+
+@media only screen and (max-width: 1174px) {
+    .main-nav .nav-right .input-group {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .main-nav .nav-right .input-group {
+        margin-left: 10px !important;
+    }
+
+    .main-nav .navbar-expand-sm .navbar-nav .nav-link {
+        padding: 1.2rem !important;
+    }
+
+    .main-nav .form-group select {
+        padding: 15px 12px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main-nav .nav-right .input-group {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main-nav .navbar-toggler {
+        font-size: 1.5rem;
+    }
+
+    .main-nav .navbar {
+        box-shadow: 0 4px 2px -2px #ccc;
+    }
+
+    .main-nav .nav-link {
+        border-right: 0 !important;
+    }
+
+    .main-nav .search-bar {
+        margin: 20px 0;
+    }
+
+    .main-nav .shop-links {
+        font-size: 200%;
+    }
+
+    .main-nav .account-links {
+        font-size: 150%;
+    }
+
+    .form-inline {
+        margin-left: 0 !important;
+    }
+
+    .form-group {
+        margin-bottom: 0 !important;
+    }
+
+    .main-nav .nav-right .form-control {
+        font-size: 150%;
+    }
+
+    .main-nav .form-group select {
+        padding: 25px 12px;
+    }
+
+
+
+}
+

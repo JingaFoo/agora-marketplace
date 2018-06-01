@@ -54,6 +54,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -150,11 +156,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ElectronicsController.cs" />
     <Compile Include="Controllers\FashionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,8 +271,45 @@
     <Compile Include="Migrations\201805100438563_AddProductConditionModel.Designer.cs">
       <DependentUpon>201805100438563_AddProductConditionModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805102342129_AddProductAvailabilityModel.cs" />
+    <Compile Include="Migrations\201805102342129_AddProductAvailabilityModel.Designer.cs">
+      <DependentUpon>201805102342129_AddProductAvailabilityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805102343334_AddProductAvailabilityModel1.cs" />
+    <Compile Include="Migrations\201805102343334_AddProductAvailabilityModel1.Designer.cs">
+      <DependentUpon>201805102343334_AddProductAvailabilityModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805102351280_DropProductAvailabilityTable.cs" />
+    <Compile Include="Migrations\201805102351280_DropProductAvailabilityTable.Designer.cs">
+      <DependentUpon>201805102351280_DropProductAvailabilityTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110001228_DropProductAvailabilitiesTable.cs" />
+    <Compile Include="Migrations\201805110001228_DropProductAvailabilitiesTable.Designer.cs">
+      <DependentUpon>201805110001228_DropProductAvailabilitiesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110002547_ResetProductAvailabilityModel.cs" />
+    <Compile Include="Migrations\201805110002547_ResetProductAvailabilityModel.Designer.cs">
+      <DependentUpon>201805110002547_ResetProductAvailabilityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110005357_IncludeProductAvailabilityModel.cs" />
+    <Compile Include="Migrations\201805110005357_IncludeProductAvailabilityModel.Designer.cs">
+      <DependentUpon>201805110005357_IncludeProductAvailabilityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110006556_DropProductAvailModel.cs" />
+    <Compile Include="Migrations\201805110006556_DropProductAvailModel.Designer.cs">
+      <DependentUpon>201805110006556_DropProductAvailModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110009158_AddAvailabilityModel.cs" />
+    <Compile Include="Migrations\201805110009158_AddAvailabilityModel.Designer.cs">
+      <DependentUpon>201805110009158_AddAvailabilityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110018316_FinallyAddAvailabilityModel.cs" />
+    <Compile Include="Migrations\201805110018316_FinallyAddAvailabilityModel.Designer.cs">
+      <DependentUpon>201805110018316_FinallyAddAvailabilityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\Categories.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Filters.cs" />
@@ -274,31 +319,22 @@
     <Compile Include="Models\Subcategories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ProductFormViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\categories.css" />
     <Content Include="Content\dashboard.css" />
-    <Content Include="Content\fa-brands.css" />
-    <Content Include="Content\fa-brands.min.css" />
-    <Content Include="Content\fa-regular.css" />
-    <Content Include="Content\fa-regular.min.css" />
-    <Content Include="Content\fa-solid.css" />
-    <Content Include="Content\fa-solid.min.css" />
     <Content Include="Content\fashion.css" />
     <Content Include="Content\fontawesome-all.css" />
     <Content Include="Content\fontawesome-all.min.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
-    <Content Include="Content\fonts\ionicons.svg" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\manage.css" />
-    <Content Include="Content\smartphones.css" />
+    <Content Include="Content\product-form.css" />
+    <Content Include="Content\product-list.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -321,19 +357,6 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Content\ionicons\_ionicons-variables.less" />
-    <Content Include="Content\ionicons\_ionicons-icons.less" />
-    <Content Include="Content\ionicons\_ionicons-font.less" />
-    <Content Include="Content\ionicons\ionicons.less" />
-    <Content Include="Content\fonts\ionicons.woff" />
-    <Content Include="Content\fonts\ionicons.ttf" />
-    <Content Include="Content\fonts\ionicons.eot" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -398,12 +421,14 @@
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
     <Content Include="Views\Categories\Categories.cshtml" />
-    <Content Include="Views\Dashboard\ProductForm.cshtml" />
+    <Content Include="Views\Manage\ProductForm.cshtml" />
     <Content Include="Views\Dashboard\Dashboard.cshtml" />
-    <Content Include="Views\Dashboard\Manage.cshtml" />
+    <Content Include="Views\Manage\Manage.cshtml" />
     <Content Include="Views\Fashion\Shoes.cshtml" />
     <Content Include="Views\Electronics\Electronics.cshtml" />
     <Content Include="Views\Electronics\Smartphones.cshtml" />
+    <Content Include="Views\ProductList\ProductList.cshtml" />
+    <Content Include="Views\Books\Books.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,10 +522,47 @@
     <EmbeddedResource Include="Migrations\201805100438563_AddProductConditionModel.resx">
       <DependentUpon>201805100438563_AddProductConditionModel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805102342129_AddProductAvailabilityModel.resx">
+      <DependentUpon>201805102342129_AddProductAvailabilityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805102343334_AddProductAvailabilityModel1.resx">
+      <DependentUpon>201805102343334_AddProductAvailabilityModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805102351280_DropProductAvailabilityTable.resx">
+      <DependentUpon>201805102351280_DropProductAvailabilityTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110001228_DropProductAvailabilitiesTable.resx">
+      <DependentUpon>201805110001228_DropProductAvailabilitiesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110002547_ResetProductAvailabilityModel.resx">
+      <DependentUpon>201805110002547_ResetProductAvailabilityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110005357_IncludeProductAvailabilityModel.resx">
+      <DependentUpon>201805110005357_IncludeProductAvailabilityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110006556_DropProductAvailModel.resx">
+      <DependentUpon>201805110006556_DropProductAvailModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110009158_AddAvailabilityModel.resx">
+      <DependentUpon>201805110009158_AddAvailabilityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110018316_FinallyAddAvailabilityModel.resx">
+      <DependentUpon>201805110018316_FinallyAddAvailabilityModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Testing|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />

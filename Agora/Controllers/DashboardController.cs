@@ -24,46 +24,5 @@ namespace Agora.Controllers
             return View();
         }
 
-        [Route("dashboard/create")]
-        public ActionResult New()
-        {
-            var categories = _context.Categories.ToList();
-            var subcat = _context.Subcategories.ToList();
-            var condition = _context.ProductCondition.ToList();
-            var viewModel = new ProductFormViewModel
-            {
-                Categories = categories,
-                Subcategories = subcat,
-                ProductCondition = condition
-            };
-
-            return View("ProductForm", viewModel);
-        }
-
-
-
-        [Route("dashboard/manage")]
-        public ActionResult Manage()
-        {
-            var products = _context.Products.ToList();
-            return View(products);
-        }
-
-        public ActionResult Edit(int productId)
-        {
-            var products = _context.Products.SingleOrDefault(c => c.ProductId == productId);
-
-            if (products == null)
-                return HttpNotFound();
-
-            var viewModel = new ProductFormViewModel
-            {
-                Products = products,
-                Categories = _context.Categories.ToList(),
-                Subcategories = _context.Subcategories.ToList(),
-                ProductCondition = _context.ProductCondition.ToList()
-            };
-            return View("ProductForm", viewModel);
-        }
     }
 }

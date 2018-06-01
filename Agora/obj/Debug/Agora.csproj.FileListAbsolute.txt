@@ -120,3 +120,16 @@ D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddCategoryIdToSubCategoryMod
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductBrand.resources
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddCentsAndConditionToProductModel.resources
 D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductConditionModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductAvailabilityModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddProductAvailabilityModel1.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.DropProductAvailabilityTable.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.DropProductAvailabilitiesTable.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.ResetProductAvailabilityModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.IncludeProductAvailabilityModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.DropProductAvailModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.AddAvailabilityModel.resources
+D:\Projects\Agora\Agora\obj\Debug\Agora.Migrations.FinallyAddAvailabilityModel.resources
+D:\Projects\Agora\Agora\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Agora\Agora\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Agora\Agora\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\Agora\Agora\bin\Microsoft.AspNet.Identity.EntityFramework.xml

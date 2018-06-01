@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Agora.Models;
+using Agora.ViewModels;
 
 namespace Agora.Controllers
 {
@@ -28,7 +29,15 @@ namespace Agora.Controllers
         public ViewResult Smartphones()
         {
             var smartphones = _context.Products.Where(x => x.SubCategoryName == "Smartphones");
-            return View(smartphones);
+            var subcat = _context.Subcategories.SingleOrDefault(c => c.SubcategoryId == 4);
+
+            var viewModel = new ProductViewModel
+            {
+                Products = smartphones,
+                SubCategory = subcat
+            };
+
+            return View("~/Views/ProductList/ProductList.cshtml", viewModel);
         }
     }
 }

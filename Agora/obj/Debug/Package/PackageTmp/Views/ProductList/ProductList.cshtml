@@ -1,0 +1,63 @@
+﻿@using Agora.Models
+@model Agora.ViewModels.ProductViewModel
+
+@{
+    ViewBag.Title = "Agora Marketplace";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="products">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1 class="display-4">@Model.SubCategory.SubcategoryName</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        @foreach (var products in Model.Products)
+        {
+            <div class="row">
+                <div class="col-sm-5 col-5">
+                    <div class="product-image-box">
+                        <img class="product-image" src="@products.Image" alt="Product Image" />
+                    </div>
+                </div>
+                <div class="col-sm-7 col-7">
+                    <div class="product-details">
+                        <div class="product-title">
+                            <a class="product" href="#"><h4>@products.Product</h4></a>
+                        </div>
+                        <div class="product-brand">
+                            <span class="brand-before">by </span><a href="#"><span class="brand">@products.Brand</span></a>
+                        </div>
+                        <div class="product-condition">
+                            <span class="condition">@products.Condition</span>
+                        </div>
+                        <div class="product-price">
+                            @if (products.Cents == 0)
+                            {
+                            <h5><span>$@products.Price</span><span>.00</span></h5>
+                            }
+                            else
+                            {
+                            <h5><span>$@products.Price</span><span>.@products.Cents</span></h5>
+                            }
+
+                        </div>
+                        <div class="product-availability">
+                            <h5>@products.Availability</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        }
+    </div>
+</div>
+
+
+

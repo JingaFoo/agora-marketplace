@@ -1,0 +1,21 @@
+﻿.dashboard-menu {
+    text-align: center;
+}
+
+.dashboard-menu-title,
+.dashboard-menu-icon {
+    font-size: 150%;
+
+}
+
+.dashboard-menu a {
+    color: #555;
+}
+
+.dashboard-menu a:hover {
+    color: #8B4513;
+}
+
+.dashboard-menu-box {
+    background-color: #fff;
+}

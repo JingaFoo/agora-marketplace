@@ -20,6 +20,7 @@ namespace Agora.Models
         public int  Price { get; set; }
         public byte Cents { get; set; }
         public string Condition { get; set; }
+        public string Availability { get; set; }
         public string CategoryName { get; set; }
         public string SubCategoryName { get; set; }
     }

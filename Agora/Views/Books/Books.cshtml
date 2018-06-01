@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Agora.Models.Subcategories>
+
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="jumbotron">
+            <h1 class="display-4">Books</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+</div>
+<div class="container category-content">
+    <div class="row">
+        @foreach (var subcat in Model)
+        {
+            <div class="col-md-4">
+                <div class="category-box">
+                    <h4><a href="/Books/@subcat.SubcategoryName">@subcat.SubcategoryName</a></h4>
+                    <hr />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

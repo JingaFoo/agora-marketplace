@@ -1,0 +1,128 @@
+﻿@model IEnumerable<Agora.Models.Products>
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Remove", "Manage"))
+{
+    <div class="manage">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Manage your products</h1>
+                    <p class="lead">Search, select and manage your products</p>
+                    <hr class="my-4"/>
+                </div>
+            </div>
+        </div>
+        <div class="table-view row d-none d-sm-block">
+            <div class="col-12">
+                <table class="table" style="text-align: center;">
+                    <thead class="thead-dark">
+                    <tr class="table-headings">
+                        <th scope="col">ID</th>
+                        <th scope="col">Condition</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Subcategory</th>
+                        <th scope="col">Price ($)</th>
+                        <th scope="col">Availability</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr class="data-name">
+                            <th class="align-middle" scope="row">@product.ProductId</th>
+                            <td class="align-middle">@product.Condition</td>
+                            <td class="align-middle">@product.Product</td>
+                            <td class="align-middle"><img class="product-image" src="@product.Image" alt="Product image" /></td>
+                            <td class="align-middle">@product.CategoryName</td>
+                            <td class="align-middle">@product.SubCategoryName</td>
+                            <td class="align-middle">@product.Price.@product.Cents</td>
+                            <td class="align-middle">@product.Availability</td>
+                            <td class="align-middle edit">@Html.ActionLink("Edit", "Edit", "Manage", new { productId = product.ProductId }, null)</td>
+                            <td class="align-middle remove">@Html.ActionLink("Remove", "Remove", "Manage", new { productId = product.ProductId }, null)</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-view d-block d-sm-none">
+            <div class="container">
+                <div class="row no-gutters">
+                    @foreach (var product in Model)
+                    {
+                        <div class="col-12 p-4">
+                            <div class="card-contents">
+                                <div class="product-title">
+                                    <h4>@product.Product</h4>
+                                </div>
+                                <div class="card-image">
+                                    <img class="product-image" src="@product.Image" alt="Product image"/>
+                                </div>
+                                <div class="card-details">
+                                    <div class="row no-gutters card-link">
+                                        <div class="col-6 link-button" style="border-right: 1px solid #e7e7e7;">@Html.ActionLink("Edit", "Edit", "Manage", new { productId = product.ProductId }, null)</div>
+                                        <div class="col-6 link-button link-remove">@Html.ActionLink("Remove", "Remove", "Manage", new { productId = product.ProductId }, null)</div>
+                                    </div>
+                                    <hr />
+                                    <button class="expand-details-button" type="button" data-toggle="collapse" data-target="#@product.ProductId-collapse-details" aria-expanded="false" aria-controls="@product.ProductId-collapse-details">
+                                        Expand Details
+                                    </button>
+                                    <hr />
+                                    <div class="collapse" id="@product.ProductId-collapse-details">
+                                        <div class="container">
+                                            <div class="row no-gutters card-condition">
+                                                <div class="col-6">
+                                                    <div class="detail-title">ID</div>
+                                                    <hr />
+                                                    <div>@product.ProductId</div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="detail-title">Condition</div>
+                                                    <hr />
+                                                    <div>@product.Condition</div>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutters card-categories">
+                                                <div class="col-6">
+                                                    <div class="detail-title">Category</div>
+                                                    <hr />
+                                                    <span>@product.CategoryName</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="detail-title">Subcategory</div>
+                                                    <hr />
+                                                    <span class="ml-auto">@product.SubCategoryName</span>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutters card-price">
+                                                <div class="col-6">
+                                                    <div class="detail-title">Price</div>
+                                                    <hr />
+                                                    <span>$@product.Price.@product.Cents</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="detail-title">Availability</div>
+                                                    <hr />
+                                                    <span class="ml-auto">@product.Availability</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

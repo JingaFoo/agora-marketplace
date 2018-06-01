@@ -31,7 +31,8 @@ namespace Agora
                       "~/Content/categories.css",
                       "~/Content/dashboard.css",
                       "~/Content/manage.css",
-                      "~/Content/smartphones.css",
+                      "~/Content/product-list.css",
+                      "~/Content/product-form.css",
                       "~/Content/Site.css"));
         }
     }

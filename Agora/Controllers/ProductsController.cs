@@ -23,12 +23,26 @@ namespace Agora.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Products products)
+        public ActionResult Save(Products products)
         {
-            _context.Products.Add(products);
+            if(products.ProductId == 0) 
+                _context.Products.Add(products);
+            else
+            {
+                var productInDb = _context.Products.Single(p => p.ProductId == products.ProductId);
+                productInDb.Brand = products.Brand;
+                productInDb.Product = products.Product;
+                productInDb.Image = products.Image;
+                productInDb.Price = products.Price;
+                productInDb.Cents = products.Cents;
+                productInDb.CategoryName = products.CategoryName;
+                productInDb.SubCategoryName = products.SubCategoryName;
+                productInDb.Condition = products.Condition;
+                productInDb.Availability = products.Availability;
+            }
             _context.SaveChanges();
 
-            return RedirectToAction("Manage", "Dashboard");
+            return RedirectToAction("Manage", "Manage");
         }
 
     }

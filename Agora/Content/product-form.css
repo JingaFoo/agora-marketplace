@@ -1,0 +1,27 @@
+﻿.submit-button-box {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.submit-button-box button {
+    width: 200px;
+}
+
+.price-separator-box {
+    height: 50px; 
+    margin-top: 29px; 
+    margin-left: 5px;
+}
+
+.price-separator {
+    background-color: #ffffff;
+    border: 0;
+    font-size: 200%;
+}
+
+@media only screen and (max-width: 576px) {
+    .product-form label {
+        font-size: 100%;
+    }
+}

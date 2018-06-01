@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Agora.Models.Products>
+@{
+    ViewBag.Title = "Shoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="shoes">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1 class="display-4">Shoes</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        @foreach (var shoe in Model)
+        {
+            <div class="col-md-4">
+                <div class="content-box">
+                    <div class="title">
+                        <h3>@shoe.Product</h3>
+                    </div>
+                    <div class="image-box">
+                        <img src="@shoe.Image" alt="Alternate Text"/>
+                    </div>
+                    <div class="price">
+                        $@shoe.Price
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
