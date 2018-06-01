@@ -133,3 +133,9 @@ D:\Projects\Agora\Agora\obj\Release\Agora.csproj.CopyComplete
 D:\Projects\Agora\Agora\obj\Release\Agora.dll
 D:\Projects\Agora\Agora\obj\Release\Agora.pdb
 D:\Projects\Agora\Agora\obj\Release\Agora.csprojAssemblyReference.cache
+D:\Projects\Agora\Agora\bin\System.Net.Http.Formatting.dll
+D:\Projects\Agora\Agora\bin\System.Web.Http.dll
+D:\Projects\Agora\Agora\bin\System.Web.Http.WebHost.dll
+D:\Projects\Agora\Agora\bin\System.Net.Http.Formatting.xml
+D:\Projects\Agora\Agora\bin\System.Web.Http.xml
+D:\Projects\Agora\Agora\bin\System.Web.Http.WebHost.xml
