@@ -3,3 +3,71 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  color: #5d5d5d;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.category-content .row,
+.dashboard-menu .row {
+  flex-wrap: nowrap;
+}
+
+.jumbotron {
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+/*/ ---------------------------------------------------------------- /*/
+/*/ ---------------------- MEDIA-QUERIES --------------------------- /*/
+/*/ ---------------------------------------------------------------- /*/
+
+@media only screen and (max-width: 1080px) {
+    body {
+      font-size: 10px !important;
+    }
+
+    .navbar-brand img {
+      height: 63px !important;
+      width: auto;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    body {
+      font-size: 7px !important;
+    }
+
+    .navbar-brand img {
+      height: 44px !important;
+      width: auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+      font-size: 12px !important;
+    }
+
+    .navbar-brand {
+      padding-top: 0.31rem;
+      padding-bottom: 0;
+    }
+
+    .navbar-brand img {
+      height: 70px !important;
+      width: auto;
+    }
+}
