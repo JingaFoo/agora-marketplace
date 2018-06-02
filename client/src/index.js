@@ -12,6 +12,7 @@ import Electronics from './components/categories/electronics';
 import Books from './components/categories/books';
 import Dashboard from './components/dashboard/dashboard';
 import Manage from './components/manage/manage';
+import SmartPhones from './components/categories/subcategories/electronics/smartphones';
 import './index.css';
 
 class App extends Component {
@@ -23,7 +24,7 @@ class App extends Component {
   }
 
   fetchProducts() {
-    axios.get(`${ROOT_URL}`)
+    axios.get(`${ROOT_URL}/products`)
     .then(response => {
       this.setState({ products: response.data });
     })
@@ -42,6 +43,7 @@ class App extends Component {
           <Route path="/Electronics" component={Electronics} />
           <Route path="/Books" component={Books} />
           <Route path="/Dashboard" component={Dashboard} />
+          <Route path="/Smartphones" component={SmartPhones} />
           <Route path="/Manage" render={() => <Manage products={this.state.products} />} />
         </div>
       </Router>

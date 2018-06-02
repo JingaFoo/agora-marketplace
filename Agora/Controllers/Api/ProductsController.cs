@@ -18,21 +18,26 @@ namespace Agora.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        // GET /api/products
         public IEnumerable<Products> GetProducts()
         {
-            return _context.Products.ToList();
+            return _context.Products;
         }
 
-        // GET /api/products/id
-        public Products GetProduct(int id)
+        // GET /api/products/subcat
+        public IEnumerable<Products> GetSubcatProducts(string subcat)
         {
-            var product = _context.Products.SingleOrDefault(p => p.ProductId == id);
+            if (subcat is string)
+            {
+                var product = _context.Products.Where(p => p.SubCategoryName == subcat);
 
-            if (product == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                if (product == null)
+                    throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            return product;
+                return product;
+            } else
+            {
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            }
         }
 
         // POST /api/products

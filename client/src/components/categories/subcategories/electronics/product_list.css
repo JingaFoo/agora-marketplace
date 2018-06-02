@@ -1,0 +1,66 @@
+.products a:hover {
+  color: #8B4513;
+}
+
+.products .product-image-box .product-image {
+  height: 300px;
+  width: auto;
+}
+
+.products .product-title h4 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 150%;
+}
+
+.products .product-brand .brand,
+.products .product-condition .condition {
+  text-transform: capitalize;
+}
+
+.products .product-price h5 {
+  margin-top: 30px;
+  font-size: 100%;
+}
+
+.products .product-details .product-availability h5 {
+  font-size: 130%;
+}
+
+.products .product-condition {
+  margin-top: 5px;
+}
+
+.brand-before {
+  font-size: 90%;
+}
+
+
+/*/ ---------------------------------------------------------------- /*/
+/*/ ---------------------- MEDIA-QUERIES --------------------------- /*/
+/*/ ---------------------------------------------------------------- /*/
+
+@media only screen and (max-width: 576px) {
+  .products .product-image-box .product-image {
+    height: 140px !important;
+    width: auto;
+  }
+
+  .products .product-title h4 {
+    font-size: 110% !important;
+  }
+
+  .products .product-brand .brand,
+  .products .product-condition .condition {
+    font-size: 90% !important;
+  }
+
+  .products .product-details .product-price h5 {
+    font-size: 90%;
+    margin: 15px 0;
+  }
+
+  .products .product-details .product-availability h5 {
+    font-size: 120%;
+  }
+}
