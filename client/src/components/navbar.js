@@ -6,11 +6,11 @@ const Navbar = () => {
   return (
     <div className="main-nav">
       <nav className="navbar navbar-expand-sm">
-        <a className="navbar-brand" href="/"><img src="agora-icon.png" alt="" /></a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a className="navbar-brand" href="/"><img src="favicon.ico" alt="" /></a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseContent" aria-controls="navbarCollapseContent" aria-expanded="false" aria-label="Toggle navigation">
             <i className="ion-md-menu"></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarCollapseContent">
             <div className="nav-right d-none d-sm-block">
                 <div className="row no-gutters">
                     <div className="col-md-3 col-sm-3">

@@ -2,11 +2,19 @@ import React from 'react';
 import './manage.css';
 
 import ProductItem from './product_item';
+import ProductItemMobile from './product_item_mobile';
 
 const Manage = props => {
   const renderProduct = props.products.map((product) => {
     return (
       <ProductItem
+        product={product}
+        key={product.ProductId} />
+    );
+  });
+  const renderProductMobile = props.products.map((product) => {
+    return (
+      <ProductItemMobile
         product={product}
         key={product.ProductId} />
     );
@@ -48,7 +56,7 @@ const Manage = props => {
       <div className="card-view d-block d-sm-none">
           <div className="container">
               <div className="row no-gutters">
-
+                {renderProductMobile}
               </div>
           </div>
       </div>
