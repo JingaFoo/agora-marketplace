@@ -17,19 +17,19 @@ const Categories = () => {
         <div className="row inner-category">
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/fashion"><span className="category-title">Fashion</span></a></h4>
+              <h4><a href="/Fashion"><span className="category-title">Fashion</span></a></h4>
               <hr />
             </div>
           </div>
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/electronics"><span className="category-title">Electronics</span></a></h4>
+              <h4><a href="/Electronics"><span className="category-title">Electronics</span></a></h4>
               <hr />
             </div>
           </div>
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/books"><span className="category-title">Books</span></a></h4>
+              <h4><a href="/Books"><span className="category-title">Books</span></a></h4>
               <hr />
             </div>
           </div>
