@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './categories.css';
 
 const Books = () => {
@@ -17,7 +18,7 @@ const Books = () => {
         <div className="row inner-category">
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/Web-development"><span className="category-title">Web-development</span></a></h4>
+              <h4><NavLink to="/Web-development"><span className="category-title">Web-development</span></NavLink></h4>
               <hr />
             </div>
           </div>

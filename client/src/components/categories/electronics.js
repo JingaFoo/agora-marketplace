@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './categories.css';
 
 const Electronics = () => {
@@ -17,19 +18,19 @@ const Electronics = () => {
         <div className="row inner-category">
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/Smartphones"><span className="category-title">Smartphones</span></a></h4>
+              <h4><NavLink to="/Smartphones"><span className="category-title">Smartphones</span></NavLink></h4>
               <hr />
             </div>
           </div>
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/Televisions"><span className="category-title">Televisions</span></a></h4>
+              <h4><NavLink to="/Televisions"><span className="category-title">Televisions</span></NavLink></h4>
               <hr />
             </div>
           </div>
           <div className="col-4">
             <div className="category-box">
-              <h4><a href="/Computers"><span className="category-title">Computers</span></a></h4>
+              <h4><NavLink to="/Computers"><span className="category-title">Computers</span></NavLink></h4>
               <hr />
             </div>
           </div>
