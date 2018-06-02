@@ -41,7 +41,7 @@ class App extends Component {
           <Route path="/Fashion" component={Fashion} />
           <Route path="/Electronics" component={Electronics} />
           <Route path="/Books" component={Books} />
-          <Route path="/Dashboard" render={() => <Dashboard /> } />
+          <Route path="/Dashboard" component={Dashboard} />
           <Route path="/Manage" render={() => <Manage products={this.state.products} />} />
         </div>
       </Router>

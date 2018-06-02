@@ -24,7 +24,7 @@ const Dashboard = () => {
           </div>
           <div className="col-4">
             <div className="category-box">
-              <h4><NavLink to="/Manage/Products"><span className="category-title">Manage</span></NavLink></h4>
+              <h4><NavLink to="/Manage"><span className="category-title">Manage</span></NavLink></h4>
               <hr />
             </div>
           </div>
