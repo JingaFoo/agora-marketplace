@@ -1,0 +1,45 @@
+.category-content {
+  text-align: center;
+  margin-bottom: 400px;
+}
+
+.category-content a {
+  color: inherit;
+  transition: color .3s ease;
+  -webkit-transition: color .3s ease;
+}
+
+.category-icon {
+  font-size: 150%;
+}
+
+.category-title {
+  font-size: 100%;
+}
+
+.category-content a:hover {
+  color: #8B4513
+}
+
+.category-content h4 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.jumbotron h1 {
+  font-size: 250%;
+}
+
+.jumbotron p {
+  font-size: 100%;
+}
+
+/*/ ---------------------------------------------------------------- /*/
+/*/ ---------------------- MEDIA-QUERIES --------------------------- /*/
+/*/ ---------------------------------------------------------------- /*/
+
+@media only screen and (max-width: 576px) {
+  .category-title {
+    font-size: 70%;
+  }
+}
