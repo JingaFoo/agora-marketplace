@@ -139,3 +139,6 @@ D:\Projects\Agora\Agora\bin\System.Web.Http.WebHost.dll
 D:\Projects\Agora\Agora\bin\System.Net.Http.Formatting.xml
 D:\Projects\Agora\Agora\bin\System.Web.Http.xml
 D:\Projects\Agora\Agora\bin\System.Web.Http.WebHost.xml
+D:\Projects\Agora\Agora\bin\System.Web.Cors.dll
+D:\Projects\Agora\Agora\bin\System.Web.Http.Cors.dll
+D:\Projects\Agora\Agora\bin\System.Web.Http.Cors.xml

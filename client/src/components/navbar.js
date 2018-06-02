@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="main-nav">
       <nav className="navbar navbar-expand-sm">
-        <a className="navbar-brand" href="/"><img src="favicon.ico" alt="" /></a>
+        <a className="navbar-brand" href="/"><img src="agora-icon.png" alt="" /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapseContent" aria-controls="navbarCollapseContent" aria-expanded="false" aria-label="Toggle navigation">
             <i className="ion-md-menu"></i>
         </button>
