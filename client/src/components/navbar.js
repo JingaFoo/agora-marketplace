@@ -44,7 +44,7 @@ const Navbar = () => {
             </div>
             <div className="d-none d-sm-block">
                 <ul className="navbar-nav ml-auto">
-                  <li className="nav-item"><NavLink to="/" className="nav-item nav-link active">Dashboard</NavLink></li>
+                  <li className="nav-item"><NavLink to="/Dashboard" className="nav-item nav-link active">Dashboard</NavLink></li>
                   <li className="nav-item"><NavLink to="/" className="nav-item nav-link nav-border"><i className="ion-md-settings nav-icon"></i></NavLink></li>
                 </ul>
             </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <ul className="navbar-nav product-nav">
-                    <li className="nav-item"><NavLink to="/" className="nav-item nav-link account-links">Dashboard</NavLink></li>
+                    <li className="nav-item"><NavLink to="/Dashboard" className="nav-item nav-link account-links">Dashboard</NavLink></li>
                     <li className="nav-item"><NavLink to="/" className="nav-item nav-link account-links">Settings</NavLink></li>
                     </ul>
                 </form>
