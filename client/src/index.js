@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './index.css';
-
 import { ROOT_URL } from './config/api';
+
 import HomePage from './components/home_page';
 import Navbar from './components/navbar';
 import Categories from './components/categories/categories';
@@ -13,12 +12,13 @@ import Electronics from './components/categories/electronics';
 import Books from './components/categories/books';
 import Dashboard from './components/dashboard/dashboard';
 import Manage from './components/manage/manage';
+import './index.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { products: {} };
+    this.state = { products: [] };
     this.fetchProducts();
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="nav-routes">
+        <div>
           <Navbar />
           <Route exact path="/" component={HomePage} />
           <Route path="/Categories" component={Categories} />
@@ -49,6 +49,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />,
+ReactDOM.render(
+  <App />,
   document.getElementById('root')
 );

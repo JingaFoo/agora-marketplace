@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="row no-gutters">
                     <div className="col-md-3 col-sm-3">
                         <ul className="navbar-nav">
-                          <li className="nav-item"><NavLink to="/categories" className="nav-item nav-link">Categories</NavLink></li>
+                          <li className="nav-item"><NavLink to="/Categories" className="nav-item nav-link">Categories</NavLink></li>
                           <li className="nav-item"><NavLink to="/" className="nav-item nav-link nav-border">Deals</NavLink></li>
                         </ul>
                     </div>

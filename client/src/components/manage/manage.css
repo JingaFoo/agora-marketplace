@@ -1,0 +1,141 @@
+.table-view .data-name {
+  text-transform: capitalize;
+}
+
+.table-view .table {
+  text-align: center;
+}
+
+.table-view .edit a {
+  color: #555;
+}
+
+.table-view .remove a {
+  color: #555;
+}
+
+.table-view .edit a:hover {
+  color: #8b4513;
+}
+
+.table-view .remove a:hover {
+  color: #8B4513;
+}
+
+.table-view .edit {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.table-view .product-image {
+  height: 100px;
+  width: auto;
+}
+
+
+/*/ ---------------------------------------------------------------- /*/
+/*/ ---------------------- MEDIA-QUERIES --------------------------- /*/
+/*/ ---------------------------------------------------------------- /*/
+
+@media only screen and (max-width: 576px) {
+  .manage .data-img {
+    height: 30px !important;
+    width: auto;
+  }
+
+  .card-view .card-details .link-button {
+    font-size: 120%;
+    font-weight: 500;
+  }
+
+  .card-view .card-details .col-6 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .card-view .card-details-title {
+    text-align: center
+  }
+
+  /*/ ---------------------------------------------------------------- /*/
+  /*/ ---------------------- CARD-VIEW ------------------------------- /*/
+  /*/ ---------------------------------------------------------------- /*/
+
+  .card-view .card-contents {
+    background-color: #fff;
+    color: #555;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 3px #e3e3e3;
+    text-align: center;
+  }
+
+  .card-view .product-title {
+    border-bottom: 1px solid #8b4513;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .card-view .card-image {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  .card-view .card-details .detail-title {
+    font-size: 100%;
+    font-weight: 500;
+  }
+
+  .card-view .product-image {
+    height: auto;
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  .card-view .card-link {
+    text-align: center;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-weight: 400;
+    -webkit-appearance: none;
+  }
+
+  .card-view .link-remove a {
+    color: #700 !important;
+  }
+
+  .card-view .card-link a {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-decoration: none;
+  }
+
+  .card-view .card-link a:hover {
+    color: #8b4513;
+  }
+
+  .card-view .card-contents h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 100%;
+    font-weight: 500;
+  }
+
+  .expand-details-button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding-bottom: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px solid #8b4513;
+    letter-spacing: .1em;
+    background: #fff;
+    -webkit-appearance: none;
+  }
+}
