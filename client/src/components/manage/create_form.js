@@ -42,6 +42,16 @@ class CreateForm extends Component {
         <option key={subcategory.SubcategoryId}>{subcategory.SubcategoryName}</option>
       );
     });
+    const renderConditions = this.props.conditions.map((condition) => {
+      return (
+        <option key={condition.ConditionId}>{condition.ConditionType}</option>
+      );
+    });
+    const renderAvailabilities = this.props.availabilities.map((availability) => {
+      return (
+        <option key={availability.ProductAvailabilityId}>{availability.ProductAvailabilityType}</option>
+      );
+    });
     return (
       <div className="container product-form d-none d-sm-block">
           <div className="form-row">
@@ -121,13 +131,13 @@ class CreateForm extends Component {
               <div className="form-group col-2">
                   <label htmlFor="condition_field">Condition</label>
                   <select id="condition_field" className="form-control" name="condition">
-
+                    {renderConditions}
                   </select>
               </div>
               <div className="form-group col-2">
                   <label htmlFor="availability_field">Availability</label>
                   <select id="availability_field" className="form-control" name="availability">
-
+                    {renderAvailabilities}
                   </select>
               </div>
           </div>

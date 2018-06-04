@@ -142,3 +142,4 @@ D:\Projects\Agora\Agora\bin\System.Web.Http.WebHost.xml
 D:\Projects\Agora\Agora\bin\System.Web.Cors.dll
 D:\Projects\Agora\Agora\bin\System.Web.Http.Cors.dll
 D:\Projects\Agora\Agora\bin\System.Web.Http.Cors.xml
+D:\Projects\Agora\Agora\obj\Release\Agora.Migrations.ChangeAvailabilityToProductAvailability.resources

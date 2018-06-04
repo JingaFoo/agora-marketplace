@@ -36,7 +36,7 @@ namespace Agora.Controllers
             var categories = _context.Categories.ToList();
             var subcat = _context.Subcategories.ToList();
             var condition = _context.ProductCondition.ToList();
-            var availability = _context.Availability.ToList();
+            var availability = _context.ProductAvailability.ToList();
             var viewModel = new ProductFormViewModel
             {
                 Categories = categories,
@@ -61,7 +61,7 @@ namespace Agora.Controllers
                 Categories = _context.Categories.ToList(),
                 Subcategories = _context.Subcategories.ToList(),
                 ProductCondition = _context.ProductCondition.ToList(),
-                Availability = _context.Availability.ToList()
+                Availability = _context.ProductAvailability.ToList()
             };
             return View("ProductForm", viewModel);
         }

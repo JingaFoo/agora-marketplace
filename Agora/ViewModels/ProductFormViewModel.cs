@@ -11,7 +11,7 @@ namespace Agora.ViewModels
         public IEnumerable<Categories> Categories { get; set; }
         public IEnumerable<Subcategories> Subcategories { get; set; }
         public IEnumerable<ProductCondition> ProductCondition { get; set; }
-        public IEnumerable<Availability> Availability { get; set; }
+        public IEnumerable<ProductAvailability> Availability { get; set; }
         public Products Products { get; set; }
     }
 }

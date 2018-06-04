@@ -19,19 +19,5 @@ namespace Agora.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public AllCategories GetCategories()
-        {
-            var categories = _context.Categories;
-            var subcategories = _context.Subcategories;
-
-            var AllCategories = new AllCategories()
-            {
-                categories = categories,
-                subcategories = subcategories
-            };
-
-            return AllCategories;
-        }
-
     }
 }

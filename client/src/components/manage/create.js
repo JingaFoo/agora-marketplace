@@ -13,7 +13,11 @@ const Create = (props) => {
           </div>
         </div>
       </div>
-      <CreateForm categories={props.categories} subcategories={props.subcategories} request={props.request}/>
+      <CreateForm
+        categories={props.categories}
+        subcategories={props.subcategories}
+        conditions={props.conditions} availabilities={props.availabilities}
+        request={props.request} />
     </div>
   );
 }

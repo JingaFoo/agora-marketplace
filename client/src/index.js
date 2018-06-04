@@ -20,7 +20,13 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { products: [], categories: [], subcategories: [] };
+    this.state = {
+      products: [],
+      categories: [],
+      subcategories: [],
+      conditions: [],
+      availabilities: []
+    };
     this.fetchProducts();
     this.fetchCategories();
   }
@@ -36,9 +42,14 @@ class App extends Component {
   }
 
   fetchCategories() {
-    axios.get(`${ROOT_URL}/categories`)
+    axios.get(`${ROOT_URL}/formdata`)
     .then(response => {
-      this.setState({ categories: response.data.categories, subcategories: response.data.subcategories });
+      this.setState({
+        categories: response.data.Categories,
+        subcategories: response.data.Subcategories,
+        conditions: response.data.ProductConditions,
+        availabilities: response.data.ProductAvailabilities
+      });
     })
     .catch(error => {
       console.log(error);
@@ -68,8 +79,10 @@ class App extends Component {
           <Route path="/Smartphones" component={SmartPhones} />
           <Route path="/Manage" render={() => <Manage products={this.state.products} />} />
           <Route path="/Create" render={() =>
-            <Create categories={this.state.categories} subcategories={this.state.subcategories}
-                    request={ form => this.createProductRequest(form) } />} />
+            <Create
+              categories={this.state.categories} subcategories={this.state.subcategories}
+              conditions={this.state.conditions} availabilities={this.state.availabilities}
+              request={ form => this.createProductRequest(form) } />} />
         </div>
       </Router>
     );

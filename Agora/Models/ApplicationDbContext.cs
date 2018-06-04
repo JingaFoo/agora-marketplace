@@ -14,6 +14,6 @@ namespace Agora.Models
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Subcategories> Subcategories { get; set; }
         public DbSet<ProductCondition> ProductCondition { get; set; }
-        public DbSet<Availability> Availability { get; set; }
+        public DbSet<ProductAvailability> ProductAvailability { get; set; }
     }
 }

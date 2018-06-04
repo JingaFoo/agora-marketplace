@@ -26,7 +26,7 @@ const Navbar = () => {
                                 <div className="input-group-append">
                                     <div className="form-group">
                                         <select className="custom">
-                                            <option selected>All</option>
+                                            <option>All</option>
                                             <option>Fashion</option>
                                             <option>Electronics</option>
                                         </select>
@@ -64,7 +64,7 @@ const Navbar = () => {
                         <div className="input-group-append">
                             <div className="form-group">
                                 <select>
-                                    <option selected>All</option>
+                                    <option>All</option>
                                     <option>Fashion</option>
                                     <option>Electronics</option>
                                 </select>
