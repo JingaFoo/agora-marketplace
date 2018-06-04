@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CreateForm from './create_form.js';
 
 const Create = (props) => {
-  console.log(props)
   return (
     <div className="create">
       <div className="row">
@@ -14,7 +13,7 @@ const Create = (props) => {
           </div>
         </div>
       </div>
-      <CreateForm categories={props.categories} request={props.request}/>
+      <CreateForm categories={props.categories} subcategories={props.subcategories} request={props.request}/>
     </div>
   );
 }

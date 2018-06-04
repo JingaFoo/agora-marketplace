@@ -6,20 +6,51 @@ class CreateForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { form: {} };
+    this.state = {
+      form: {},
+      options: 'Select a category' };
+  }
+
+  handleUserInput(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+    let form = this.state.form;
+    form[name] = value;
+
+    this.setState({ form: form })
   }
 
   render() {
+    const renderCategories = this.props.categories.map((category) => {
+      return (
+        <option key={category.CategoryId}>{category.CategoryName}</option>
+      );
+    });
+    const renderSubcategories = this.props.subcategories.map((subcategory) => {
+      return (
+        <option key={subcategory.SubcategoryId}>{subcategory.SubcategoryName}</option>
+      );
+    });
     return (
       <div className="container product-form d-none d-sm-block">
           <div className="form-row">
               <div className="form-group col-3">
                   <label htmlFor="brand_field">Brand/Author</label>
-                  <input id="brand_field" type="text" name="brand" className="form-control" />
+                  <input
+                    id="brand_field"
+                    type="text"
+                    name="brand"
+                    className="form-control"
+                    onChange={this.handleUserInput.bind(this)} />
               </div>
               <div className="form-group col-9">
                   <label htmlFor="product_field">Product</label>
-                  <input id="product_field" type="text" name="product" className="form-control" />
+                  <input
+                    id="product_field"
+                    type="text"
+                    name="product"
+                    className="form-control"
+                    onChange={this.handleUserInput.bind(this)} />
               </div>
           </div>
           <div className="form-row">
@@ -45,13 +76,13 @@ class CreateForm extends Component {
               <div className="form-group col-4">
                   <label htmlFor="category_name_field">Category</label>
                   <select id="category_name_field" className="form-control" name="category_name">
-
+                    {renderCategories}
                   </select>
               </div>
               <div className="form-group col-4">
                   <label htmlFor="subcategory_name_field">Subcategory</label>
                   <select id="subcategory_name_field" className="form-control" name="subcategory_name">
-
+                    {renderSubcategories}
                   </select>
               </div>
               <div className="form-group col-2">

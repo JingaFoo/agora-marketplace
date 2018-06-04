@@ -173,6 +173,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Config\BrowserJsonFormatter.cs" />
+    <Compile Include="Controllers\Api\CategoriesController.cs" />
     <Compile Include="Controllers\Api\ProductsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
@@ -326,6 +327,7 @@
       <DependentUpon>201805110018316_FinallyAddAvailabilityModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AllCategories.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\Categories.cs" />
