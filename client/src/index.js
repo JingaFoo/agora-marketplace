@@ -13,20 +13,42 @@ import Books from './components/categories/books';
 import Dashboard from './components/dashboard/dashboard';
 import Manage from './components/manage/manage';
 import SmartPhones from './components/categories/subcategories/electronics/smartphones';
+import Create from './components/manage/create';
 import './index.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { products: [] };
+    this.state = { products: [], categories: {} };
     this.fetchProducts();
+    this.fetchCategories();
   }
 
   fetchProducts() {
     axios.get(`${ROOT_URL}/products`)
     .then(response => {
       this.setState({ products: response.data });
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
+  fetchCategories() {
+    axios.get(`${ROOT_URL}/categories`)
+    .then(response => {
+      this.setState({ categories: response.data });
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+
+  createProductRequest(form) {
+    axios.post(`${ROOT_URL}/products`, form)
+    .then(response => {
+      console.log(response.data);
     })
     .catch(error => {
       console.log(error);
@@ -45,6 +67,9 @@ class App extends Component {
           <Route path="/Dashboard" component={Dashboard} />
           <Route path="/Smartphones" component={SmartPhones} />
           <Route path="/Manage" render={() => <Manage products={this.state.products} />} />
+          <Route path="/Create" render={() =>
+            <Create categories={this.state.categories} 
+                    request={ form => this.createProductRequest(form) } />} />
         </div>
       </Router>
     );

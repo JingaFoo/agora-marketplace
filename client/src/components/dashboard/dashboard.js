@@ -18,7 +18,7 @@ const Dashboard = () => {
         <div className="row inner-category">
           <div className="col-4">
             <div className="category-box">
-              <h4><NavLink to="/Manage/Create"><span className="category-title">Create</span></NavLink></h4>
+              <h4><NavLink to="/Create"><span className="category-title">Create</span></NavLink></h4>
               <hr />
             </div>
           </div>
