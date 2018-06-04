@@ -7,7 +7,17 @@ class CreateForm extends Component {
     super(props);
 
     this.state = {
-      form: {},
+      form: {
+        brand: '',
+        product: '',
+        image: '',
+        price: '',
+        cents: '',
+        category_name: '',
+        subcategory_name: '',
+        condition: '',
+        availability: ''
+      },
       options: 'Select a category' };
   }
 
@@ -18,6 +28,7 @@ class CreateForm extends Component {
     form[name] = value;
 
     this.setState({ form: form })
+    console.log(this.state.form)
   }
 
   render() {
@@ -41,6 +52,7 @@ class CreateForm extends Component {
                     type="text"
                     name="brand"
                     className="form-control"
+                    value={this.state.form.brand}
                     onChange={this.handleUserInput.bind(this)} />
               </div>
               <div className="form-group col-9">
@@ -50,38 +62,59 @@ class CreateForm extends Component {
                     type="text"
                     name="product"
                     className="form-control"
+                    value={this.state.form.product}
                     onChange={this.handleUserInput.bind(this)} />
               </div>
           </div>
           <div className="form-row">
               <div className="form-group col-8">
                   <label htmlFor="image_field">Product image (URL)</label>
-                  <input id="image_field" type="text" name="image" className="form-control" />
+                  <input
+                    id="image_field"
+                    type="text"
+                    name="image"
+                    className="form-control"
+                    value={this.state.form.image}
+                    onChange={this.handleUserInput.bind(this)} />
               </div>
           </div>
           <div className="form-row">
               <div className="form-group col-1">
                   <label htmlFor="price_field">Dollars ($)</label>
-                  <input id="price_field" type="text" name="price" className="form-control" />
+                  <input
+                    id="price_field"
+                    type="text"
+                    name="price"
+                    className="form-control"
+                    value={this.state.form.price}
+                    onChange={this.handleUserInput.bind(this)} />
               </div>
               <div className="input-group-append price-separator-box">
                   <span className="input-group-text price-separator">.</span>
               </div>
               <div className="form-group col-1">
                   <label htmlFor="cents_field">Cents (¢)</label>
-                  <input id="cents_field" type="text" name="cents" className="form-control" />
+                  <input
+                    id="cents_field"
+                    type="text"
+                    name="cents"
+                    className="form-control"
+                    value={this.state.form.cents}
+                    onChange={this.handleUserInput.bind(this)} />
               </div>
           </div>
           <div className="form-row">
               <div className="form-group col-4">
                   <label htmlFor="category_name_field">Category</label>
-                  <select id="category_name_field" className="form-control" name="category_name">
+                  <select value={this.state.form.category_name} onChange={this.handleUserInput.bind(this)}
+                    id="category_name_field" className="form-control" name="category_name">
                     {renderCategories}
                   </select>
               </div>
               <div className="form-group col-4">
                   <label htmlFor="subcategory_name_field">Subcategory</label>
-                  <select id="subcategory_name_field" className="form-control" name="subcategory_name">
+                  <select value={this.state.form.subcategory_name} onChange={this.handleUserInput.bind(this)}
+                    id="subcategory_name_field" className="form-control" name="subcategory_name">
                     {renderSubcategories}
                   </select>
               </div>
