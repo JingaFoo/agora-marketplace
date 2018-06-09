@@ -130,13 +130,15 @@ class CreateForm extends Component {
               </div>
               <div className="form-group col-2">
                   <label htmlFor="condition_field">Condition</label>
-                  <select id="condition_field" className="form-control" name="condition">
+                  <select value={this.state.form.condition} onChange={this.handleUserInput.bind(this)}
+                    id="condition_field" className="form-control" name="condition">
                     {renderConditions}
                   </select>
               </div>
               <div className="form-group col-2">
                   <label htmlFor="availability_field">Availability</label>
-                  <select id="availability_field" className="form-control" name="availability">
+                  <select value={this.state.form.availability} onChange={this.handleUserInput.bind(this)}
+                    id="availability_field" className="form-control" name="availability">
                     {renderAvailabilities}
                   </select>
               </div>
